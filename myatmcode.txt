@@ -1,0 +1,51 @@
+       Scanner sc = new Scanner(System.in);
+        System.out.println("!**** My ATM code*******!");
+        int pin;
+        System.out.print("Please enter your pin: ");
+        pin = sc.nextInt();
+        if(pin == 123456){
+            System.out.println("Welcome");
+            int cb;
+            int cw;
+            int cd;
+            int bal;
+            bal = 100000;
+            int amountw;
+            int amountd;
+            int choice;
+            System.out.println("Options for further process");
+            System.out.println("1. Check Balance");
+            System.out.println("2. Cash Withdraw");
+            System.out.println("3. Cash Deposite");
+            System.out.println("Select any one option");
+            choice=sc.nextInt();
+            switch(choice){
+                case 1:
+                    System.out.println("Your balance is" +bal);
+                      break;
+                case 2:
+                    System.out.print("Please enter your amount");
+                    amountw=sc.nextInt();
+                    if(amountw <= 500){
+                        System.out.println("please enter amount greater then 500");
+                    }
+                    else{
+                    cw = bal - amountw;
+                    System.out.println("Your amount has beed withdraw and now your remaining balance is "+ cw);
+                    }
+                      break;
+                    
+                case 3:
+                    System.out.println("Please eneter your deposite amount");
+                    amountd=sc.nextInt();
+                    cd = bal + amountd;
+                    System.out.println("Your remaining balance"+ cd);  
+                    break;
+                default:
+                    System.out.println("please select valid option");
+                      break;      
+            }
+        }
+        else{
+            System.out.println("Invalid pin, please try again");
+        }
