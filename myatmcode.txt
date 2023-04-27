@@ -31,12 +31,12 @@
                     }
                     else{
                     cw = bal - amountw;
-                    System.out.println("Your amount has beed withdraw and now your remaining balance is "+ cw);
+                    System.out.println("Your amount has been withdraw and now your remaining balance is "+ cw);
                     }
                       break;
                     
                 case 3:
-                    System.out.println("Please eneter your deposite amount");
+                    System.out.println("Please enter your deposite amount");
                     amountd=sc.nextInt();
                     cd = bal + amountd;
                     System.out.println("Your remaining balance"+ cd);  
